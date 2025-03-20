@@ -7,6 +7,7 @@ import 'dart:convert';
 
 void main() {
   group('UserViewModel Tests', () {
+    // Test case to verify fetching users successfully
     test('Fetch users', () async {
       final userService = UserService();
       userService.client = MockClient((request) async {
@@ -29,6 +30,7 @@ void main() {
       expect(userViewModel.users[0].name, 'John Doe');
     });
 
+    // Test case to verify fetching users with an empty response
     test('Fetch users with empty response', () async {
       final userService = UserService();
       userService.client = MockClient((request) async {
@@ -41,6 +43,7 @@ void main() {
       expect(userViewModel.users.length, 0);
     });
 
+    // Test case to verify fetching users with an error response
     test('Fetch users with error response', () async {
       final userService = UserService();
       userService.client = MockClient((request) async {
@@ -53,6 +56,7 @@ void main() {
       expect(userViewModel.users.length, 0);
     });
 
+    // Test case to verify the loading state during fetch
     test('Loading state during fetch', () async {
       final userService = UserService();
       userService.client = MockClient((request) async {
