@@ -4,13 +4,11 @@ Flutter boilerplate Getx mvvm
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a boilerplate for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+Read this blog for getting started:
+https://docs.google.com/document/d/11kkXhI6wM7GavjwZKDguApN6p4sLk9N4PjLs2fDesR8/edit?usp=sharing
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Consider this blog for learning about flavors for this project:
+https://docs.google.com/document/d/1FCrImOQ1xHjnPAOaVfT23SwAymT93CuDR4wMbLPLULI/edit?usp=sharing
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

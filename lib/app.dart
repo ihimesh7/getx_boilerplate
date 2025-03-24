@@ -1,10 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_boilerplate_mvvm/presentation/views/user_list_view.dart';
-
+import 'package:getx_boilerplate_mvvm/presentation/views/user_list_screen.dart';
 import 'flavors.dart';
-import 'pages/my_home_page.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -24,11 +22,11 @@ class App extends StatelessWidget {
       initialRoute: '/',
       // Define the available pages
       getPages: [
-        GetPage(name: '/', page: () => const UserListView()),
+        GetPage(name: '/', page: () => const UserListScreen()),
       ],
       // Display the flavor banner if in debug mode
       home: _flavorBanner(
-        child: const UserListView(),
+        child: const UserListScreen(),
         show: kDebugMode,
       ),
     );

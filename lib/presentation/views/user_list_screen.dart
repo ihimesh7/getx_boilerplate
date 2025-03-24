@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../viewmodels/user_viewmodel.dart';
-import 'user_detail_view.dart';
+import 'package:getx_boilerplate_mvvm/presentation/viewmodels/user_viewmodel.dart';
+import 'user_detail_screen.dart';
 
 // Stateless widget to display the list of users
-class UserListView extends StatelessWidget {
-  const UserListView({super.key});
+class UserListScreen extends StatelessWidget {
+  const UserListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class UserListView extends StatelessWidget {
                 subtitle: Text(userViewModel.users[index].email), // User email
                 onTap: () {
                   // Navigate to the user detail view on tap
-                  Get.to(UserDetailView(user: userViewModel.users[index]));
+                  Get.to(UserDetailScreen(user: userViewModel.users[index]));
                 },
               );
             },
