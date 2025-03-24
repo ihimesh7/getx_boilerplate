@@ -7,23 +7,36 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:getx_boilerplate_mvvm/app.dart';
+import 'package:get/get.dart';
+import 'package:getx_boilerplate_mvvm/presentation/views/signin_screen.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const App());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  testWidgets('SignInScreen email and password validation', (WidgetTester tester) async {
+    // Build the SignInScreen widget.
+    await tester.pumpWidget(GetMaterialApp(home: SignInScreen(email: '')));
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Verify that the email and password fields are empty.
+    expect(find.text(''), findsNWidgets(2));
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Enter invalid email and password.
+    await tester.enterText(find.byType(TextField).first, 'invalid-email');
+    await tester.enterText(find.byType(TextField).last, '');
+
+    // Verify that the email and password fields contain the entered text.
+    expect(find.text('invalid-email'), findsOneWidget);
+    expect(find.text(''), findsOneWidget);
+
+    // Enter valid email and password.
+    await tester.enterText(find.byType(TextField).first, 'test@example.com');
+    await tester.enterText(find.byType(TextField).last, 'password');
+
+    // Verify that the email and password fields contain the entered text.
+    expect(find.text('test@example.com'), findsOneWidget);
+    expect(find.text('password'), findsOneWidget);
+
+    // Verify email validation using GetX's feature.
+    expect(GetUtils.isEmail('invalid-email'), isFalse);
+    expect(GetUtils.isEmail('test@example.com'), isTrue);
   });
 }
