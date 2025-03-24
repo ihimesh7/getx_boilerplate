@@ -1,4 +1,4 @@
-import 'package:getx_boilerplate/data/models/user_model.dart';
+import 'package:getx_boilerplate_mvvm/data/models/user_model.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 

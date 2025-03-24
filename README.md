@@ -1,6 +1,6 @@
-# getx_boilerplate
+# getx_boilerplate_mvvm
 
-POC on getx MVVM flutter project with unit testing.
+Flutter boilerplate Getx mvvm
 
 ## Getting Started
 

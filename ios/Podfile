@@ -5,15 +5,9 @@
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
 project 'Runner', {
-  'Debug-dev' => :debug,
-  'Profile-dev' => :release,
-  'Release-dev' => :release,
-  'Debug-staging' => :debug,
-  'Profile-staging' => :release,
-  'Release-staging' => :release,
-  'Debug-production' => :debug,
-  'Profile-production' => :release,
-  'Release-production' => :release,
+  'Debug' => :debug,
+  'Profile' => :release,
+  'Release' => :release,
 }
 
 def flutter_root
@@ -35,7 +29,6 @@ flutter_ios_podfile_setup
 
 target 'Runner' do
   use_frameworks!
-  use_modular_headers!
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
   target 'RunnerTests' do

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getx_boilerplate/data/models/user_model.dart';
+import 'package:getx_boilerplate_mvvm/data/models/user_model.dart' show User;
 
 /// View for displaying details of a user
 class UserDetailView extends StatelessWidget {

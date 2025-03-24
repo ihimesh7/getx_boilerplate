@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:getx_boilerplate/data/models/user_model.dart';
-import 'package:getx_boilerplate/data/repositories/user_service.dart';
+import 'package:getx_boilerplate_mvvm/data/models/user_model.dart';
+import 'package:getx_boilerplate_mvvm/data/repositories/user_service.dart';
 
 /// ViewModel for managing user data and state
 class UserViewModel extends GetxController {

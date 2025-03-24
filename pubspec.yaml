@@ -1,5 +1,5 @@
-name: getx_boilerplate
-description: "GetX Boilerplate."
+name: getx_boilerplate_mvvm
+description: "Flutter boilerplate Getx mvvm"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.5.4
+  sdk: ^3.7.2
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -30,26 +30,24 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  get: ^4.6.5 # For GetX state management
-  http: ^1.3.0  # For making API calls
-  get_storage: ^2.1.1 # Optional, for local storage (if needed)
-
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  get: ^4.6.5 # For GetX state management
+  http: ^1.3.0  # For making API calls
+  get_storage: ^2.1.1 # Optional, for local storage (if needed)
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  mockito: ^5.4.0 # For mocking dependencies in unit tests
-  flutter_flavorizr:
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
+  flutter_flavorizr:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -99,20 +97,20 @@ flavorizr:
       app:
         name: "Getx Boilerplate Dev"
       android:
-        applicationId: "com.example.getx_boilerplate.dev"
+        applicationId: "com.example.getx_boilerplate_mvvm.dev"
       ios:
-        bundleId: "com.example.getx_boilerplate.dev"
+        bundleId: "com.example.getx_boilerplate_mvvm.dev"
     staging:
       app:
         name: "Getx Boilerplate Staging"
       android:
-        applicationId: "com.example.getx_boilerplate.staging"
+        applicationId: "com.example.getx_boilerplate_mvvm.staging"
       ios:
-        bundleId: "com.example.getx_boilerplate.staging"
+        bundleId: "com.example.getx_boilerplate_mvvm.staging"
     production:
       app:
         name: "Getx Boilerplate"
       android:
-        applicationId: "com.example.getx_boilerplate"
+        applicationId: "com.example.getx_boilerplate_mvvm"
       ios:
-        bundleId: "com.example.getx_boilerplate"
+        bundleId: "com.example.getx_boilerplate_mvvm"
